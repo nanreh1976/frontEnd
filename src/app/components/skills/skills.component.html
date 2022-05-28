@@ -1,0 +1,35 @@
+
+<div class="row m-3">
+    <h1 style="text-align: center;">Hard & Soft Skills</h1>
+    <!-- <div class="d-flex justify-content-center" style="background-color: pink">
+         <app-addbutton *ngIf="login" class="me-5"></app-addbutton> <app-editbutton *ngIf="login" (click)="abrirModal()" class="me-2"></app-editbutton>   <app-deletebutton *ngIf="login" ></app-deletebutton>
+    </div>    -->
+    <app-addbutton *ngIf="login" (click)="abrirModalAgregar()"></app-addbutton>
+      <div *ngFor="let Ski of skill" class="col-3">
+        <div class=" d-flex justify-content-center">
+          <p> {{Ski.titulo}}</p>  
+          <circle-progress
+              [percent]="Ski.dominio"
+              [radius]="65"
+              [subtitle]="Ski.titulo"
+              [subtitleColor]="'#000000'"
+              [outerStrokeWidth]="8"
+              [innerStrokeWidth]="8"
+              [outerStrokeColor]="'#F70401'"
+              [innerStrokeColor]="'#5178B3'"
+              [animation]="true"
+              [animationDuration]="300"
+              [responsive]="true"
+          ></circle-progress>
+        
+         
+        </div>   
+        <div align="row">
+          <app-editbutton *ngIf="login" (click)="abrirModal(Ski.idskill)" class="d-flex align-items-center"></app-editbutton><app-deletebutton  *ngIf="login"(click)="borrarSkill(Ski.idskill)" ></app-deletebutton>
+        <div>
+          
+        </div>
+        
+        </div>
+      </div>
+  </div>

@@ -1,0 +1,40 @@
+/* Una forma */
+/*.experiencia { 
+    background: #afa;
+    padding: 6px;
+}
+#experiencia {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+#experiencia > li {
+    margin-right: 1rem;
+}
+.img{
+    width: max-content;
+    align-items: center;
+    margin: auto;
+    display: flex;
+}*/
+.card-img, .card-img-bottom, .card-img-top {
+    width: 100px;
+    align-items: center;
+    margin: auto;
+    margin-top: 25px;
+} 
+/* La otra forma */
+.experiencia { 
+    background:  #f0f0f0 ;
+    padding: 1px;
+    border-radius: 20px ;
+}
+#experiencia {
+    padding: 0;
+    list-style: none;
+}
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
