@@ -62,29 +62,6 @@ export class ExperienciaModalComponent implements OnInit {
         );
 
   }
-  // guardarExperiencia(){
-  //   if(this.eduNueva){
-  //       this.crearExperiencia();      
-  //   }else{
-  //     this.actualizarExperiencia();
-  //   }
-
-  // }
-  // crearExperiencia(){
-  //   this.experienciaService.save(this.formulario.value).subscribe(
-  //     data => {
-  //       this.activeModal.close();
-  //     }
-  //   );
-  // }
-  // actualizarExperiencia(){
-  //   console.log(this.formulario.value)
-  //   this.experienciaService.update(this.id, this.formulario.value).subscribe(
-  //     data => {
-  //       this.activeModal.close();
-  //     }
-  //   );
-  // }
   editarForm(exp:any){
     this.formulario.setValue( {
       idlaboral: exp.idlaboral,

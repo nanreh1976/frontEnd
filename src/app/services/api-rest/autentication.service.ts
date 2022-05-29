@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, map, Observable } from 'rxjs';
 import { User } from '../interface/user';
 import { LoginService } from './login.service';
-import { environment } from 'src/environments/environment';
+//import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
 export class AutenticationService {
 
   url: string = "https://nanreh1976.herokuapp.com/api/login";
+  //url: string = environment.apiUrl+'/login';
  
   user: User = { username: "", password: "", token: "" } ;
 
