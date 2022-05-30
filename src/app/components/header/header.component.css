@@ -19,14 +19,17 @@ header#mainHeader {
     z-index: 1;
     
 }
-/* @media screen and (max-width: 500px) {
-    .ap{
-        width: 15px;
+
+@media (max-width:440px){
+    .arpr{
         display: none;
-    } 
-}*/
+
+    }
+
+}
 .inHeader > img{
-    height: 2rem; /* 4 * 16px */
+    height: 2.4rem; /* 4 * 16px */
+    width: 2.4rem; /* 4 * 16px */
 }
 a{
     color: white;
