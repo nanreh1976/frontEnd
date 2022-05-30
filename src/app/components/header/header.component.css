@@ -28,8 +28,8 @@ header#mainHeader {
 
 }
 .inHeader > img{
-    height: 2.4rem; /* 4 * 16px */
-    width: 2.4rem; /* 4 * 16px */
+    height: 2.9rem; /* 4 * 16px */
+    width: 2.9rem; /* 4 * 16px */
 }
 a{
     color: white;
