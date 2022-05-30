@@ -35,18 +35,7 @@ export class IniciarSesionComponent implements OnInit {
     //probablemente acá quiera cargar algo...
   }
 
-  /*loginFalso() {
-    //pedir al post...    
-    this.userService.login("olivia", "1234").subscribe(
-      data => {
-        this.persona = data;
-        //console.log(this.persona);
-        localStorage.setItem("persona", JSON.stringify(this.persona));
-        this.volverAlHome();
-      }
-    );
-  }*/
-
+  
   login() {
     //pedir al post...    
     this.userService.login( this.formulario.value.username, this.formulario.value.password).subscribe(

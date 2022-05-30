@@ -1,6 +1,7 @@
 div#first-card {
     padding: 1rem;
     margin: 1rem;
+    width: 75%;
 }
 
 .info-text {

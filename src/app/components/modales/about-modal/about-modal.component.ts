@@ -19,10 +19,10 @@ export class AboutModalComponent implements OnInit {
 
   constructor(public activeModal: NgbActiveModal, private personaService:PersonaService, private fb: FormBuilder) { 
     this.formulario = this.fb.group({
-    //idpersona: [''],
+   
    
     acerca: [''],
-    //persona: [''],
+    
 
   })
 
@@ -48,10 +48,10 @@ export class AboutModalComponent implements OnInit {
 }
 editarForm(abt:any){
   this.formulario.setValue( {
-    //idpersona: abt.idpersona,
+   
     
     acerca: abt.acerca,
-   // persona: abt.persona
+   
   });
 }
 

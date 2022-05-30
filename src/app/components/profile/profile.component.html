@@ -4,7 +4,7 @@
     <div class="card all-card" id="first-card">
         
         <div class="info">
-            <div class="info-img">
+            <div class="info-img" >
                 <div class="d-flex justify-content-end" style="background-color: blueviolet">
                 <!-- <app-editbutton id="fantasma" *ngIf="login" (click)="abrirModal(persona.idpersona)"class="me-2" style="background-color: red;"></app-editbutton>-->
                 </div>               
@@ -28,11 +28,12 @@
             <div class="info-btns">
                 
                 <app-editbutton *ngIf="login" (click)="abrirModal(persona.idpersona)" style="background-color: white">Editar</app-editbutton>
-                <!-- <button *ngIf="login" class="btn btn-primary" type="button" > </button> -->
-                <!--<button class="btn" type="button">Añadir sección</button>
-                <button class="btn" type="button">Más</button>-->
+                
             </div>
+            
         </div>
     </div>
-   
+    <div class="about">
+    <app-about></app-about>
+</div>
 </div>

@@ -91,10 +91,5 @@ export class EducacionComponent implements OnInit {
       data => { this.ngOnInit() }
     );
   }
-  /*
-  isLoggedIn(): boolean {
-
-    return this.loginService.isLoggedIn();  
-  }
-  */
+  
 }

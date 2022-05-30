@@ -15,14 +15,17 @@
         <div class="card-body"> 
         <div class="d-flex justify-content-between">
           <h5 class="card-title">{{Edu.titulo}} </h5>
-            <div *ngIf="login"  >
-              <app-editbutton (click)="abrirModal(Edu.ideducacion)" class="me-2"></app-editbutton>   <app-deletebutton (click)="borrarEducacion(Edu.ideducacion)" ></app-deletebutton>
             </div>            
-        </div>            
           <p class="card-text">{{Edu.institucion}}</p>
           <p class="card-text">{{Edu.institucionurl}}</p>
+        
           <p class="card-text">{{Edu.fechafin}}</p>
-        </div>  
+        </div>
+        <div *ngIf="login"  >
+          <app-editbutton (click)="abrirModal(Edu.ideducacion)" class="me-2"></app-editbutton>   <app-deletebutton (click)="borrarEducacion(Edu.ideducacion)" ></app-deletebutton>
+        
+        </div>
+        <br>
     </div>
   </div>
   </div>
