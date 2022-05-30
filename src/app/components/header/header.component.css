@@ -19,7 +19,12 @@ header#mainHeader {
     z-index: 1;
     
 }
-
+/* @media screen and (max-width: 500px) {
+    .ap{
+        width: 15px;
+        display: none;
+    } 
+}*/
 .inHeader > img{
     height: 2rem; /* 4 * 16px */
 }
