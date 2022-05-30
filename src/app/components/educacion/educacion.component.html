@@ -17,9 +17,12 @@
           <h5 class="card-title">{{Edu.titulo}} </h5>
             </div>            
           <p class="card-text">{{Edu.institucion}}</p>
-          <p class="card-text">{{Edu.institucionurl}}</p>
+          <!--<p class="card-text">{{Edu.institucionurl}}<a href="{{Edu.institucionurl}}" *ngIf ="Edu.institucionurl"   class="card-text" target="_blank"> Ver certificado</a>-->
+          <!--<p class="card-text">{{Edu.institucionurl}}</p>-->
         
           <p class="card-text">{{Edu.fechafin}}</p>
+          <a href="{{Edu.institucionurl}}" class="card-text" *ngIf ="Edu.institucionurl"><button type="button" class="btn btn-outline-primary"> Web institucion </button></a>
+          
         </div>
         <div *ngIf="login"  >
           <app-editbutton (click)="abrirModal(Edu.ideducacion)" class="me-2"></app-editbutton>   <app-deletebutton (click)="borrarEducacion(Edu.ideducacion)" ></app-deletebutton>
