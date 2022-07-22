@@ -12,6 +12,8 @@
         <div class="card-body">
           
           </div>  
+          
+          <p class="card-text">{{Pro.titulo}}</p>
           <p class="card-text">{{Pro.descripcion}}</p>
           <div *ngIf="login"  >
             <app-editbutton (click)="abrirModal(Pro.idproyecto)" class="me-2"></app-editbutton>   <app-deletebutton (click)="borrarProyecto(Pro.idproyecto)" ></app-deletebutton>
