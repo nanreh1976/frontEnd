@@ -1,10 +1,10 @@
 <div class="educacion m-3">
+  <br>
   <h1>EDUCACION </h1>
+  <ul id="educacion">
+  <app-addbutton *ngIf="login" (click)="crearEducacionModal()" class="btn-add" ></app-addbutton>
   
-  <app-addbutton *ngIf="login" (click)="crearEducacionModal()" ></app-addbutton>
-  <br>
-  <br>
-  <div class="card mb-3" style="max-width: 540px;" *ngFor="let Edu of educacion">
+  <!--<div class="card mb-3" style="max-width: 540px;" *ngFor="let Edu of educacion">
     
     
     <div class="d-flex">
@@ -17,10 +17,10 @@
           <h5 class="card-title">{{Edu.titulo}} </h5>
             </div>            
           <p class="card-text">{{Edu.institucion}}</p>
-          <!--<p class="card-text">{{Edu.institucionurl}}<a href="{{Edu.institucionurl}}" *ngIf ="Edu.institucionurl"   class="card-text" target="_blank"> Ver certificado</a>-->
+          <p class="card-text">{{Edu.institucionurl}}<a href="{{Edu.institucionurl}}" *ngIf ="Edu.institucionurl"   class="card-text" target="_blank"> Ver certificado</a> -->
           <!--<p class="card-text">{{Edu.institucionurl}}</p>-->
         
-          <p class="card-text">{{Edu.fechafin}}</p>
+      <!--    <p class="card-text">{{Edu.fechafin}}</p>
           <a href="{{Edu.institucionurl}}" class="card-text" *ngIf ="Edu.institucionurl" target="_blank"><button type="button" class="btn btn-outline-primary" > Web institucion </button></a>
           
         </div>
@@ -30,5 +30,35 @@
         </div>
         <br>
     </div>
-  </div>
+  </div>-->
+      
+      <li *ngFor="let Edu of educacion">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 mt-3">
+              <div class="card">
+                <div class="card-horizontal">
+                  <div class="img-square-wrapper">
+                    <img [src]="Edu.fotourl ? Edu.fotourl : 'https://i.ibb.co/v38g2VH/nulo.png'" class="card-img-top" alt="Card image cap" />
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">{{Edu.titulo}}</h4>
+                    <h5>{{Edu.institucion}}</h5>
+                    <p class="card-text">{{Edu.titulo}}</p>
+                    <a href="{{Edu.institucionurl}}" class="card-text" *ngIf ="Edu.institucionurl" target="_blank"><button type="button" class="btn btn-outline-primary" > Website </button></a>
+                    <div *ngIf="login" >
+                      <br>
+                      <app-editbutton (click)="abrirModal(Edu.ideducacion)" class="me-2"></app-editbutton>   <app-deletebutton  (click)="borrarEducacion(Edu.ideducacion)" > </app-deletebutton>
+                    </div>            
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <small class="text-muted">Fin: {{Edu.fechafin}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>

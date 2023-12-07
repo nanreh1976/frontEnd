@@ -10,7 +10,8 @@ import { EducacionModalComponent } from '../modales/educacion-modal/educacion-mo
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css'],
 })
-export class EducacionComponent implements OnInit { 
+export class EducacionComponent implements OnInit {
+//[x: string]: string; // correccion da cannot get
 
   login:any;
   //inyecta el servicio de modal

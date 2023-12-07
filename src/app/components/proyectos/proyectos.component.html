@@ -1,6 +1,7 @@
-
-  <h2>Proyectos</h2>
-  <app-addbutton *ngIf="login" (click)="abrirModalAgregar()"></app-addbutton>
+<div class="experiencia m-3">
+  <br>  
+  <h1>Proyectos</h1>
+  <!--<app-addbutton *ngIf="login" (click)="abrirModalAgregar()" class="btn-add"></app-addbutton>
   <br>
   <br>
   <div class="card mb-3" style="max-width: 540px;" *ngFor="let Pro of proyecto">
@@ -22,8 +23,37 @@
 
         </div>
       </div>
-    </div>
+    </div>  -->
+    <ul id="experiencia">
+      <app-addbutton *ngIf="login" (click)="abrirModalAgregar()" class="btn-add"></app-addbutton>
+      <li *ngFor="let Pro of proyecto">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 mt-3">
+              <div class="card">
+                <div class="card-horizontal">
+                  <div class="img-square-wrapper">
+                    <img [src]="Pro.url ? Pro.url : 'https://i.ibb.co/v38g2VH/nulo.png'" class="card-img-top" alt="Card image cap" />
+                  </div>
+                  <div class="card-body">
+                    <h4 class="card-title">{{Pro.titulo}}</h4>
+                    <!--<h5>{{Pro.titulo}}</h5>-->
+                    <p class="card-text">{{Pro.descripcion}}</p>
+                    <div *ngIf="login" >
+                      <br>
+                      <app-editbutton (click)="abrirModal(Pro.idproyecto)" class="me-2" ></app-editbutton>   <app-deletebutton  (click)="borrarProyecto(Pro.idproyecto)" > </app-deletebutton>
+                    </div>            
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
 
+
+</div>
 
 
   

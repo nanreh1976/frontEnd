@@ -1,4 +1,10 @@
-<div class="container" >
+<div class="container">
+    <app-header></app-header>
+    <img src="https://i.ibb.co/TKDtyqN/header-background.jpg" alt="band" class="styleimg1">
+    <img src="https://i.ibb.co/Xj8Sy7r/hernan2.jpg" alt="Profile" class="styleimg2">
+  
+
+<div class="container1" >
     <form [formGroup]="formulario" class="m-5" (ngSubmit)="iniciarSesion()">
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Username</label>
@@ -19,7 +25,7 @@
             <div *ngIf="password?.errors && password?.touched">
                 <p *ngIf="password?.hasError('required')" class="text-danger">
                     La contraseña es requerida
-                </p>              
+                </p>
             </div>
         </div>
 
@@ -27,4 +33,11 @@
         <button type="submit" class="btn btn-primary" (click)="volverAlHome()">Volver</button>
 
     </form>
+</div>
+<!--<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<div>
+    <app-footer></app-footer>
+-->
+<app-footer></app-footer>
+
 </div>

@@ -1,7 +1,7 @@
 div#first-card {
     padding: 1rem;
     margin: 1rem;
-    width: 75%;
+    width: 100%;
 }
 
 .info-text {
@@ -12,10 +12,10 @@ button.btn-primary {
     font-weight: bold;
     
 }
-.info-btns {
+/*.info-btns {
     padding: 1rem;
     margin: 0.1rem;
-}
+}*/
 
 img.card-img-top {
     width: 100%;
