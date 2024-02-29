@@ -5,7 +5,8 @@
 export const environment = {
   production: true,
   //apiUrl: 'http://nanreh1976.heroku/api/',
-  apiUrl: 'http://localhost:8080/api',
+  //apiUrl: 'http://localhost:8080/api',
+  apiUrl: 'https://portfoliobck-7eui.onrender.com/api',
 };
 
 
